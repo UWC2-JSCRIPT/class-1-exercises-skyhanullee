@@ -5,6 +5,7 @@
 // 1. Pagliacci charges $16.99 for a 13” pizza and $19.99 for a 17” pizza.
 // What is the area for each of these pizzas?
 // (radius would be the listed size - i.e. 13" - divided by 2)
+
 const SMALL_PIZZA_DIAMETER = 13;
 const LARGE_PIZZA_DIAMETER = 17;
 
@@ -16,14 +17,15 @@ const largePizzaArea = Math.PI * ((SMALL_PIZZA_DIAMETER / 2)**2);
 
 
 // 2. What is the cost per square inch of each pizza?
+
 const smallCostPerSquareInch = SMALL_PIZZA_COST / smallPizzaArea;
 const largeCostPerSquareInch = LARGE_PIZZA_COST / largePizzaArea;
-
 
 
 // 3. Using the Math object, put together a code snippet
 // that allows you to draw a random card with a value
 // between 1 and 13 (assume ace is 1, jack is 11…)
+
 const card = Math.ceil(Math.random() * 13);
 
 
@@ -38,6 +40,7 @@ for (let i = 0; i < 3; i++) {
 }
 
 const highestCard = Math.max(...cards);
+
 
 /**
  * ADDRESS LINE
@@ -63,6 +66,7 @@ const zipCode = '98195';
 // 
 // Write code that is able to extract the first name from this string into a variable.
 // Hint: use indexOf, slice, and / or substring
+
 const fullAddress = 
     `
     ${firstName} ${lastName}
@@ -73,7 +77,6 @@ const fullAddress =
 const fullAddressArr = fullAddress.split(/[,\n\s]/);
 const firstNameIndex = fullAddressArr.indexOf(`${firstName}`);
 const firstNameExtract = fullAddressArr[firstNameIndex];
-console.log(firstNameExtract);
 
 
 /**
@@ -85,4 +88,7 @@ console.log(firstNameExtract);
 // Look online for documentation on Date objects.
 
 // Starting hint:
-const endDate = new Date(2019, 3, 1);
+const startDate = new Date(2020, 0, 1);
+const endDate = new Date(2020, 3, 1);
+
+const middleDate = new Date((startDate.getTime() + endDate.getTime()) / 2);
