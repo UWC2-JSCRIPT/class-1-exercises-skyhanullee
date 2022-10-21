@@ -51,9 +51,9 @@ const highestCard = Math.max(...cards);
 const firstName = 'John';
 const lastName = 'Doe';
 const streetAddress = '123 Main Street';
-const city = 'New York';
-const state = 'NY';
-const zipCode = '10001';
+const city = 'Seattle';
+const state = 'WA';
+const zipCode = '98195';
 
 
 // 2. You are given a string in this format:
@@ -63,6 +63,17 @@ const zipCode = '10001';
 // 
 // Write code that is able to extract the first name from this string into a variable.
 // Hint: use indexOf, slice, and / or substring
+const fullAddress = 
+    `
+    ${firstName} ${lastName}
+    ${streetAddress}
+    ${city}, ${state} ${zipCode}
+    `;
+
+const fullAddressArr = fullAddress.split(/[,\n\s]/);
+const firstNameIndex = fullAddressArr.indexOf(`${firstName}`);
+const firstNameExtract = fullAddressArr[firstNameIndex];
+console.log(firstNameExtract);
 
 
 /**
