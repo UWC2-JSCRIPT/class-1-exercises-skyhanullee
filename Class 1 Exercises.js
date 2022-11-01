@@ -12,14 +12,20 @@ const LARGE_PIZZA_DIAMETER = 17;
 const SMALL_PIZZA_COST = 16.99;
 const LARGE_PIZZA_COST = 19.99;
 
-const smallPizzaArea = Math.PI * ((SMALL_PIZZA_DIAMETER / 2)**2);
-const largePizzaArea = Math.PI * ((SMALL_PIZZA_DIAMETER / 2)**2);
+const smallPizzaArea = (Math.PI * ((SMALL_PIZZA_DIAMETER / 2)**2)).toFixed(2); // toFixed(2) rounds to 2 decimal places
+const largePizzaArea = (Math.PI * ((LARGE_PIZZA_DIAMETER / 2)**2)).toFixed(2);
+
+console.log(`small pizza area: ${smallPizzaArea} sq in`);
+console.log(`large pizza area: ${largePizzaArea} sq in`);
 
 
 // 2. What is the cost per square inch of each pizza?
 
-const smallCostPerSquareInch = SMALL_PIZZA_COST / smallPizzaArea;
-const largeCostPerSquareInch = LARGE_PIZZA_COST / largePizzaArea;
+const smallCostPerSquareInch = (SMALL_PIZZA_COST / smallPizzaArea).toFixed(2);
+const largeCostPerSquareInch = (LARGE_PIZZA_COST / largePizzaArea).toFixed(2);
+
+console.log(`small pizza cost per square inch: $${smallCostPerSquareInch}`);
+console.log(`large pizza cost per square inch: $${largeCostPerSquareInch}`);
 
 
 // 3. Using the Math object, put together a code snippet
@@ -27,6 +33,8 @@ const largeCostPerSquareInch = LARGE_PIZZA_COST / largePizzaArea;
 // between 1 and 13 (assume ace is 1, jack is 11…)
 
 const card = Math.ceil(Math.random() * 13);
+
+console.log(`single random card: ${card}`);
 
 
 // 4. Draw 3 cards and use Math to determine the highest
@@ -40,6 +48,9 @@ for (let i = 0; i < 3; i++) {
 }
 
 const highestCard = Math.max(...cards);
+
+console.log(`list of random cards: ${cards}`);
+console.log(`highest card from the list: ${highestCard}`);
 
 
 /**
